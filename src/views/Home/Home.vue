@@ -1,8 +1,13 @@
 <template>
   <Layout>
-    <template v-slot:header>123</template>
-    <template v-slot:sider>234</template>
-    <template v-slot:content>345</template>
+    <template v-slot:header>header</template>
+    <template v-slot:folder>
+      <p v-for="item in 100" :key="'fo_' + item">folder</p>
+    </template>
+    <template v-slot:file>
+      <p v-for="item in 100" :key="'fe_' + item">file</p>
+    </template>
+    <template v-slot:content>content</template>
   </Layout>
 </template>
 
