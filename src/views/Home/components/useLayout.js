@@ -1,8 +1,8 @@
 import { ref } from 'vue'
 
 //
-const folder_width = ref(200)
-const file_width = ref(200)
+const folder_width = ref(260)
+const file_width = ref(220)
 const min_folder_width = 180
 const min_file_width = 180
 let move_folder_flag = false
