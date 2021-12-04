@@ -7,7 +7,15 @@
     <template v-slot:file>
       <p v-for="item in 100" :key="'fe_' + item">file</p>
     </template>
-    <template v-slot:content>content</template>
+    <template v-slot:content>
+      <ul>
+        <li v-for="item in 50" :key="'l_' + item">
+          <p v-for="_item in 100" :key="'l_' + item + '_p_' + _item">
+            [{{ item }}，{{ _item }}]
+          </p>
+        </li>
+      </ul>
+    </template>
   </Layout>
 </template>
 
@@ -27,4 +35,15 @@ export default {
 }
 </script>
 
-<style scoped lang=""></style>
+<style scoped lang="scss">
+ul {
+  display: flex;
+  li {
+    list-style: none;
+    p {
+      padding: 2px;
+      white-space: nowrap;
+    }
+  }
+}
+</style>
