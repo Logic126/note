@@ -1,0 +1,60 @@
+{
+  "value": "我的文件夹",
+  "code": "1",
+  "flag": false,
+  "children": [
+    {
+      "value": "我的资源",
+      "code": "11",
+      "flag": false,
+      "children": [
+        {
+          "value": "层级2-1",
+          "code": "111",
+          "flag": false,
+          "children": [
+            {
+              "value": "层级3-1",
+              "code": "1111",
+              "flag": false,
+              "children": [
+                {
+                  "value": "层级4-1",
+                  "code": "11111",
+                  "flag": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "value": "层级2-2",
+          "code": "112",
+          "flag": false,
+          "children": [
+            {
+              "value": "层级2-2-2",
+              "code": "1121",
+              "flag": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": "来自手机",
+      "code": "12",
+      "flag": false,
+      "children": [
+        {
+          "value": "来自手机11111",
+          "code": "121",
+          "flag": false,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

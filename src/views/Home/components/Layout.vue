@@ -14,7 +14,7 @@
         <!-- folder -->
         <div class="scrol-area" :style="{ width: folder_width + 'px' }">
           <div class="layout-folder-area">
-            <div class="folder-box" :style="{ width: folder_width - 3 + 'px' }">
+            <div class="folder-box" :style="{ width: folder_width - 1 + 'px' }">
               <slot name="folder" />
             </div>
             <div
@@ -75,12 +75,13 @@ export default {
         .layout-file-area {
           box-sizing: border-box;
           display: table;
+          min-height: calc(100vh - $header-height);
           .folder-box {
             display: table-cell;
           }
           .control {
             display: table-cell;
-            width: 3px;
+            width: 1px;
             cursor: col-resize;
             border-right: 1px solid $border-color-base;
             box-sizing: border-box;
