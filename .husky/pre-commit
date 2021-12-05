@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-
-npm run lint
+# 加入下面这行
+PATH="/usr/local/bin:$PATH"
+npm run lint:staged

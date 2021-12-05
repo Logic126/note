@@ -19,6 +19,7 @@
             </div>
             <div
               class="control"
+              :style="{ cursor: resize }"
               @mousedown="e => handleMousedown('folder')"
             ></div>
           </div>
@@ -30,6 +31,7 @@
             <div class="file-box"><slot name="file" /></div>
             <div
               class="control"
+              :style="{ cursor: resize }"
               @mousedown="e => handleMousedown('file')"
             ></div>
           </div>

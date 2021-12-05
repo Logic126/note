@@ -11,6 +11,7 @@ let move_file_flag = false
 let move_file_x = 0
 const time_speed = 220
 let timer = null
+let resize = ref('col-resize')
 
 // 修改文件夹宽度 TODO: 需要优化
 const handleChangeFolderWidth = width => {
@@ -58,10 +59,14 @@ const handleMouseup = () => {
   timer = setTimeout(() => {
     move_folder_flag = false
     move_file_flag = false
+    resize.value = 'col-resize'
   }, time_speed)
 }
 
 const handleMousemove = e => {
+  if ((move_folder_flag || move_file_flag) && resize.value !== 'auto') {
+    resize.value = 'auto'
+  }
   if (move_folder_flag) {
     handleChangeFolderWidth(e.clientX)
   }
@@ -72,6 +77,7 @@ const handleMousemove = e => {
 
 export default function () {
   return {
+    resize,
     folder_width,
     file_width,
     handleMousedown,
