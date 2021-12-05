@@ -9,13 +9,7 @@
       <p v-for="item in 100" :key="'fe_' + item">file</p>
     </template>
     <template v-slot:content>
-      <ul>
-        <li v-for="item in 50" :key="'l_' + item">
-          <p v-for="_item in 100" :key="'l_' + item + '_p_' + _item">
-            [{{ item }}，{{ _item }}]
-          </p>
-        </li>
-      </ul>
+      <Editor />
     </template>
   </Layout>
 </template>
@@ -23,13 +17,17 @@
 <script>
 import Layout from './components/Layout.vue'
 import Tree from './components/Tree.vue'
+import Editor from '@/components/Editor/Wangeditor.vue'
 export default {
-  components: { Layout, Tree },
+  components: { Layout, Tree, Editor },
   setup() {
     return {}
   },
   data() {
-    return {}
+    return {
+      html: `<p>123123</p>`,
+      text: '<p>123123</p>'
+    }
   },
   created() {},
   mounted() {},
